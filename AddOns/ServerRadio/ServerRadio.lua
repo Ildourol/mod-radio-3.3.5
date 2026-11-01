@@ -54,11 +54,11 @@ headerIcon:SetTexCoord(0.07, 0.93, 0.07, 0.93)
 -- Header Title
 local title = frame:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
 title:SetPoint("LEFT", headerIcon, "RIGHT", 10, 4)
-title:SetText("Everlook Broadcasting Co.")
+title:SetText("Server Radio")
 
 local subtitle = frame:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
 subtitle:SetPoint("LEFT", headerIcon, "RIGHT", 10, -10)
-subtitle:SetText("Live Azeroth Community Radio & Sound System")
+subtitle:SetText("Live Internet Radio & Sound System")
 
 -- Close Button
 local closeBtn = CreateFrame("Button", nil, frame, "UIPanelCloseButton")
@@ -247,7 +247,7 @@ optTitle:SetText("Server Radio Settings")
 
 local optSubtext = optionsPanel:CreateFontString(nil, "ARTWORK", "GameFontHighlightSmall")
 optSubtext:SetPoint("TOPLEFT", optTitle, "BOTTOMLEFT", 0, -8)
-optSubtext:SetText("Live streaming radio for WoW 3.3.5a (Everlook Broadcasting Co.).")
+optSubtext:SetText("Live streaming radio for WoW 3.3.5a.")
 
 local optAutoPause = CreateFrame("CheckButton", "ServerRadioOptAutoPause", optionsPanel, "UICheckButtonTemplate")
 optAutoPause:SetPoint("TOPLEFT", optSubtext, "BOTTOMLEFT", -2, -16)
@@ -439,7 +439,7 @@ function ServerRadio_CreateToggleButton()
     b:SetScript("OnEnter", function(self)
         GameTooltip:SetOwner(self, "ANCHOR_LEFT")
         GameTooltip:SetText("Server Radio", 1, 0.79, 0.30)
-        GameTooltip:AddLine("Everlook Broadcasting Co.", 1, 1, 1)
+        GameTooltip:AddLine("Live Internet Radio for WoW 3.3.5a", 1, 1, 1)
 
         local currentStation = STATIONS[ServerRadioDB.selectedStation or 1]
         local custom = urlEdit and urlEdit:GetText() or ServerRadioDB.customUrl
@@ -560,7 +560,7 @@ loaderFrame:SetScript("OnEvent", function(self, event, arg1)
         ServerRadio_CreateToggleButton()
 
         if HasRadioSupport() then
-            DEFAULT_CHAT_FRAME:AddMessage("|cFF00FF00[ServerRadio]|r Everlook Broadcasting Co. loaded! Type |cFFFFFF00/radio|r or click the Minimap icon.")
+            DEFAULT_CHAT_FRAME:AddMessage("|cFF00FF00[ServerRadio]|r Radio player loaded! Type |cFFFFFF00/radio|r or click the Minimap icon.")
         else
             DEFAULT_CHAT_FRAME:AddMessage("|cFFFF8800[ServerRadio]|r Addon loaded. Type |cFFFFFF00/radio|r or click the Minimap icon.")
         end

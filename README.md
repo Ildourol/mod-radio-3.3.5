@@ -1,7 +1,7 @@
-# Turtle WoW Radio for WoW 3.3.5a (Wrath of the Lich King)
+# Radio for WoW 3.3.5a (Wrath of the Lich King)
 
 <p align="center">
-  <img src="assets/lich_king_radio.jpg" alt="The Lich King listening to Turtle Radio" width="720"/>
+  <img src="assets/lich_king_radio.jpg" alt="The Lich King listening to Server Radio" width="720"/>
 </p>
 
 A lightweight, crash-safe client-side live audio streaming modification and in-game player for **World of Warcraft 3.3.5a (Wrath of the Lich King, build 12340)**.
@@ -47,6 +47,15 @@ The player comes pre-configured with 6 station entries. The 2 original Turtle Wo
 ---
 
 ## Installation in 3 Steps
+
+Download and extract [mod-radio-3.3.5](https://github.com/Ildourol/mod-radio-3.3.5/archive/refs/heads/main.zip), or clone `https://github.com/Ildourol/mod-radio-3.3.5.git`.
+
+The repository was renamed from `mod-twow-radio-3.3.5` to `mod-radio-3.3.5`. The extracted repository folder is only a download container: do not install it as the addon folder. The addon must remain named `ServerRadio`, with `ServerRadio.toc` and `ServerRadio.lua` inside it. Existing installations and `ServerRadioDB` saved settings remain compatible; no reset is required. The DLL filenames and Lua radio function names remain unchanged.
+
+For an existing Git checkout, update its remote with:
+```sh
+git remote set-url origin https://github.com/Ildourol/mod-radio-3.3.5.git
+```
 
 ### Step 1: Copy the DLLs to your WoW Game Folder
 Copy the following two files into your WoW game root directory (where `Wow.exe` is located):
